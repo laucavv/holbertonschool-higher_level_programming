@@ -4,7 +4,6 @@
  *@list : head
  * Return:0 if there is no cycle, 1 if there is a cycle
  */
-
 int check_cycle(listint_t *list)
 {
 	listint_t *actual, *aux;
@@ -17,7 +16,7 @@ int check_cycle(listint_t *list)
 		actual = actual->next;
 		aux = aux->next->next;
 		if (actual == aux)
-			return (1);
+			return(1);
 	}
 	return (0);
 }
