@@ -3,21 +3,20 @@
 /**
  * check_cycle - Detect a loped linked list
  * @list: list head
- *
  * Return: 0 false, 1 true
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *actual, *check;
+	listint_t *actual, *aux;
 
 	actual = list;
 	check = list;
 
-	while (actual != NULL && check != NULL && check->next != NULL)
+	while (actual != NULL && aux != NULL && aux->next != NULL)
 	{
 		actual = actual->next;
-		check = check->next->next;
-		if (actual == check)
+		aux = aux->next->next;
+		if (actual == aux)
 			return (1);
 	}
 
