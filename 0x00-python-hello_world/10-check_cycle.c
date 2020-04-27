@@ -2,7 +2,7 @@
 /**
  *check_cycle - verify if there is a cycle in the list
  *@list : head
- * Return: 0 or 1 
+ * Return:0 if there is no cycle, 1 if there is a cycle
  */
 
 int check_cycle(listint_t *list)
@@ -11,9 +11,6 @@ int check_cycle(listint_t *list)
 
 	actual = list;
 	aux = list;
-
-	if (list == NULL)
-		return (0);
 
 	while (actual != NULL && aux != NULL && aux->next != NULL)
 	{
