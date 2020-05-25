@@ -13,10 +13,12 @@
 
 
 class Rectangle:
+    """ Class """
     number_of_instances = 0
     print_symbol = '#'
-    """init method to initialize in constructor"""
+
     def __init__(self, width=0, height=0):
+        """init method to initialize in constructor"""
         self.__height = height
         self.__width = width
         Rectangle.number_of_instances += 1
