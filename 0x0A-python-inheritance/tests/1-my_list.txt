@@ -1,0 +1,49 @@
+The "1-my_list.py" module
+=========================
+
+Using "print_sorted"
+------------------------
+
+>>> MyList = __import__('1-my_list').MyList
+
+>>>my_list = MyList()
+
+Normal Cases:
+>>> my_list.append(5)
+>>> my_list.append(80)
+>>> my_list.append(9)
+>>> my_list.print_sorted()
+[5, 9, 80]
+>>> my_list.remove(5)
+>>> my_list.remove(80)
+>>> my_list.remove(9)
+>>>my_list = MyList()
+>>> my_list.print_sorted()
+[]
+>>>my_list = MyList()
+>>> my_list.append(-5)
+>>> my_list.append(-120)
+>>> my_list.append(-10)
+>>> my_list.append(8)
+>>> my_list.print_sorted()
+[-120, -10, -5, 8]
+>>>my_list = MyList()
+>>> my_list.append(8)
+>>> my_list.append(78)
+>>> my_list.append(1)
+>>> my_list.print_sorted()
+[-120, -10, -5, 1, 8, 8, 78]
+
+Error Cases:
+>>>my_list = MyList()
+>>> my_list.append('h')
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+TypeError: unorderable types: str() < int()
+>>>my_list = MyList()
+>>> my_list.print_sorted(None)
+Traceback (most recent call last):
+TypeError: print_sorted() takes 1 positional argument but 2 were given
+
+
+
