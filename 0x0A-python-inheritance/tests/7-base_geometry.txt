@@ -48,3 +48,7 @@ TypeError: my_int must be an integer
 >>> bg.integer_validator("laura", 23.1)
 Traceback (most recent call last):
 TypeError: width must be an integer
+
+>>> bg.integer_validator("camila", 'v')
+Traceback (most recent call last):
+TypeError: width must be an integer
