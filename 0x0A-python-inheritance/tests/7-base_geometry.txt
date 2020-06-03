@@ -52,3 +52,7 @@ TypeError: width must be an integer
 >>> bg_1.integer_validator("camila", 'v')
 Traceback (most recent call last):
 TypeError: width must be an integer
+
+>>> bg_1.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
