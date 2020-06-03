@@ -1,0 +1,42 @@
+The "7-base_geometry" module
+=============================
+Using "integer_validator"
+-----------------------------
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Normal Cases
+>>> bg_1 = BaseGeometry()
+>>> bg_1.integer_validator("laura", 23)
+>>> bg_1.integer_validator("betty", 98)
+>>> bg_1.integer_validator("",8)
+
+Fail Cases
+
+>>> bg_1.integer_validator("betty", 0)
+Traceback (most recent call last):
+ValueError: betty must be greater than 0
+
+>>> bg_1.integer_validator("holberton")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> bg_1.integer_validator("school", -58)
+Traceback (most recent call last):
+ValueError: school must be greater than 0
+
+>>> bg_1.integer_validator("school", "98")
+Traceback (most recent call last):
+TypeError: school must be an integer
+
+>>> bg_1.integer_validator("school", (1,2))
+Traceback (most recent call last):
+TypeError: school must be an integer
+
+>>> bg_1.integer_validator("school", [5,8])
+Traceback (most recent call last):
+TypeError: school must be an integer
+
+>>> bg_1.integer_validator("school", {2, 8})
+Traceback (most recent call last):
+TypeError: school must be an integer
