@@ -24,23 +24,23 @@ Using "print_sorted"
 >>> my_list.print_sorted()
 ['a', 'a', 'l', 'r', 'u']
 
->>> my_list = MyList([3, 2, 8, 10])
+>>> my_list = MyList([5, 9, 3, 10])
 >>> print(my_list)
-[3, 2, 8, 10]
+[5, 9, 3, 10]
 >>> my_list.print_sorted()
-[2, 3, 8, 10]
+[3, 5, 9, 10]
 
 >>> my_list = MyList()
->>> my_list.append(9)
->>> my_list.append(6)
+>>> my_list.append(10)
+>>> my_list.append(8)
 >>> print(my_list)
-[9, 6]
+[10, 8]
 >>> my_list.print_sorted()
-[6, 9]
->>> my_list.append(-10)
+[8, 10]
+>>> my_list.append(-23)
 >>> my_list.append(-1)
 >>> my_list.print_sorted()
-[-10, -1, 6, 9]
+[-23, -1, 8, 10]
 
 >>> my_list = MyList()
 >>> print(my_list)
