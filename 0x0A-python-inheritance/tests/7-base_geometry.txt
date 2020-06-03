@@ -1,11 +1,10 @@
 The "7-base_geometry" module
 =============================
-Using "integer_validator"
+Using "BaseGeometry"
 -----------------------
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 Normal cases:
-
->>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 >>> bg = BaseGeometry()
 
