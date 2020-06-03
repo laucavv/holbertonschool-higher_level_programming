@@ -6,4 +6,4 @@ def write_file(filename="", text=""):
     """ funtion """
     with open(filename, mode="w", encoding="utf-8") as my_file:
         file.write(text)
-    file.close()
+        return file
