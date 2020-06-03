@@ -40,3 +40,7 @@ TypeError: school must be an integer
 >>> bg_1.integer_validator("school", {2, 8})
 Traceback (most recent call last):
 TypeError: school must be an integer
+
+>>> bg.integer_validator("laura", None)
+Traceback (most recent call last):
+TypeError: my_int must be an integer
