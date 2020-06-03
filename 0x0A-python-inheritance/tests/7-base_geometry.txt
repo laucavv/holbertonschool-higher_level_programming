@@ -29,11 +29,11 @@ ValueError: school must be greater than 0
 Traceback (most recent call last):
 TypeError: school must be an integer
 
->>> bg_1.integer_validator("school", (1,2))
+>>> bg_1.integer_validator("school", (1, 2))
 Traceback (most recent call last):
 TypeError: school must be an integer
 
->>> bg_1.integer_validator("school", [5,8])
+>>> bg_1.integer_validator("school", [5, 8])
 Traceback (most recent call last):
 TypeError: school must be an integer
 
