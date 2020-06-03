@@ -1,10 +1,14 @@
 #!/usr/bin/python3
-""" function that reads a text file (UTF8)
-    and prints it to stdout
+"""
+    function that returns
+    the number of lines of a text file
 """
 
 
-def read_file(filename=""):
-    """ read file"""
+def number_of_lines(filename=""):
+    """funtion """
     with open("my_file_0.txt", mode="r", encoding="utf-8") as my_file:
-        print(my_file.read(), end="")
+        num_lines = 0
+        for i in my_file:
+            num_lines += 1
+        return num_lines
