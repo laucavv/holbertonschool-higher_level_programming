@@ -12,24 +12,34 @@ Using "print_sorted"
 >>> my_list.append(13)
 >>> my_list.append(12)
 >>> my_list.append(25)
+>>> print(my_list)
+[5, 99, 13, 22, 25]
 >>> my_list.print_sorted()
 [5, 12, 13, 25, 99]
 
 >>> my_list = MyList("betty")
+>>> print(my_list)
+['b', 'e', 't', 't', 'y']
 >>> my_list.print_sorted()
 ['b', 'e', 't', 't', 'y']
 
 >>> my_list = MyList("laura")
+>>> print(my_list)
+['l', 'a', 'u', 'r', 'a']
 >>> my_list.print_sorted()
 ['a', 'a', 'l', 'r', 'u']
 
 >>> my_list = MyList([5, 8, 4, 10])
+>>> print(my_list)
+[5, 8, 4, 10]
 >>> my_list.print_sorted()
 [4, 5, 8, 10]
 
 >>> my_list = MyList()
 >>> my_list.append(10)
 >>> my_list.append(8)
+>>> print(my_list)
+[10, 8]
 >>> my_list.print_sorted()
 [8, 10]
 >>> my_list.append(-23)
@@ -38,6 +48,8 @@ Using "print_sorted"
 [-23, -1, 8, 10]
 
 >>> my_list = MyList()
+>>> print(my_list)
+[]
 >>> my_list.print_sorted()
 []
 
