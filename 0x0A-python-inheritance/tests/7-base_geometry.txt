@@ -60,3 +60,7 @@ TypeError: integer_validator() missing 2 required positional arguments: 'name' a
 >>> bg_1.area()
 Traceback (most recent call last):
 Exception: area() is not implemented
+
+>>> bg_1.integer_validator("vv", True)
+Traceback (most recent call last):
+TypeError: list must be an integer
