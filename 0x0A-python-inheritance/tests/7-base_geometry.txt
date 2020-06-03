@@ -1,18 +1,17 @@
-The "7-base_geometry" module
-=============================
-Using "BaseGeometry"
+using ``BaseGeometry``
 -----------------------
->>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 Normal cases:
 
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
 >>> bg = BaseGeometry()
 
->>> bg.integer_validator("laura", 23)
+>>> bg.integer_validator("my_int", 12)
 
->>> bg.integer_validator("betty", 98)
+>>> bg.integer_validator("width", 89)
 
->>> bg.integer_validator("", 8)
+>>> bg.integer_validator("", 50)
 
 Error cases:
 
@@ -21,32 +20,32 @@ Traceback (most recent call last):
 ...
 Exception: area() is not implemented
 
->>> bg.integer_validator("cvv", 0)
+>>> bg.integer_validator("age", 0)
 Traceback (most recent call last):
 ...
 ValueError: age must be greater than 0
 
->>> bg.integer_validator("laura", -58)
+>>> bg.integer_validator("distance", -4)
 Traceback (most recent call last):
 ...
 ValueError: distance must be greater than 0
 
->>> bg.integer_validator("cam", 23.1)
+>>> bg.integer_validator("float", 3.5)
 Traceback (most recent call last):
 ...
 TypeError: float must be an integer
 
->>> bg.integer_validator("holberton")
+>>> bg.integer_validator("value")
 Traceback (most recent call last):
 ...
 TypeError: integer_validator() missing 1 required positional argument: 'value'
 
->>> bg.integer_validator("Betty", "holberton")
+>>> bg.integer_validator("name", "Juan")
 Traceback (most recent call last):
 ...
 TypeError: name must be an integer
 
->>> bg.integer_validator("neg", -36)
+>>> bg.integer_validator("test", -1)
 Traceback (most recent call last):
 ...
 ValueError: test must be greater than 0
@@ -56,27 +55,27 @@ Traceback (most recent call last):
 ...
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
->>> bg.integer_validator("test", {2, 8})
+>>> bg.integer_validator("test", {1, 1})
 Traceback (most recent call last):
 ...
 TypeError: test must be an integer
 
->>> bg.integer_validator("test", (2,))
+>>> bg.integer_validator("test", (1,))
 Traceback (most recent call last):
 ...
 TypeError: test must be an integer
 
->>> bg.integer_validator("test", [5, 1])
+>>> bg.integer_validator("test", [1, 1])
 Traceback (most recent call last):
 ...
 TypeError: test must be an integer
 
->>> bg.integer_validator("lcv", None)
+>>> bg.integer_validator("test", None)
 Traceback (most recent call last):
 ...
 TypeError: test must be an integer
 
->>> bg.integer_validator("vvv", True)
+>>> bg.integer_validator("list", True)
 Traceback (most recent call last):
 ...
 TypeError: list must be an integer
