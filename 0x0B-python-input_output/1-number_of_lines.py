@@ -7,8 +7,9 @@
 
 def number_of_lines(filename=""):
     """funtion """
-    with open("my_file_0.txt", mode="r", encoding="utf-8") as my_file:
+    with open(filename, encoding="utf-8") as file:
         num_lines = 0
-        for i in my_file:
+        for i in file:
             num_lines += 1
-        return num_lines
+    file.close()
+    return num_lines
