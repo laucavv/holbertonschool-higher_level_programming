@@ -30,21 +30,16 @@ class Base():
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """
-            That writes the JSON string representation of
-            list_objs to a file:
-        """
+        """Writes the JSON string representation of list_objs to a file"""
 
-        filename = cls.__name__ + '.json'
-        with open(filename, mode="w", encoding="utf-8") as file:
-            if list_objs is None:
-                file.write([])
-            else:
-                list_dic = []
-                for dic in list_objs:
-                    list_dic += [(dic.to_dictionary())]
-                dic_l = Base.to_json_string(list_dic)
-                file.write(dic_l)
+        new_file = "{}.json".format(cls.__name__)
+        list_dic = []
+
+        if list_objs is not None:
+            for element in list_objs:
+                list_dic.append(cls.to_dictionary(element))
+        with open(new_file, mode="w", encoding='utf-8') as my_file:
+            my_file.write(cls.to_json_string(list_dic))
 
     @staticmethod
     def from_json_string(json_string):
