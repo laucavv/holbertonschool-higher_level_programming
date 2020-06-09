@@ -37,7 +37,7 @@ class Base():
 
         filename = cls.__name__ + '.json'
         with open(filename, mode="w", encoding="utf-8") as file:
-            if list_objs is None or list_objs == []:
+            if list_objs is None:
                 file.write([])
             else:
                 list_dic = []
