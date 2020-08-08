@@ -15,11 +15,10 @@ if __name__ == "__main__":
         'passwd': argv[2],
         'db': argv[3]
     }
-
     db = MySQLdb.connect(**db_date)
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name='{}' ORDER BY id"
-                   .format(argv[4]))
+    cursor.execute("SELECT * FROM states WHERE name\
+                    LIKE BINARY '{}' ORDER BY id".format(argv[4]))
 
     list_states = cursor.fetchall()
     for states in list_states:
