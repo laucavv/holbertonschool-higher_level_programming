@@ -17,9 +17,9 @@ if __name__ == "__main__":
 
         Base.metadata.create_all(engine)
         Session = sessionmaker(bind=engine)
-        data = Session()
-        results = data.query(City, State).filter(City.state_id == State.id)
-        for dac, das in results:
-                print("{}: ({}) {}".format(das.name, dac.id, dac.name))
+        ssesion = Session()
+        result = ssesion.query(City, State).filter(City.state_id == State.id)
+        for s_c, c_c in result:
+                print("{}: ({}) {}".format(c_c.name, s_c.id, s_c.name))
 
-        data.close()
+        ssesion.close()
