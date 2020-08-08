@@ -7,6 +7,7 @@ Base = declarative_base()
 
 
 class City(Base):
+    """ class"""
 
     __tablename__ = 'cities'
 
