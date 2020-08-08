@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     db = MySQLdb.connect(**db_date)
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name LIKE BYNARY 'N%'\
+    cursor.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%'\
                    ORDER BY id")
 
     list_states = cursor.fetchall()
