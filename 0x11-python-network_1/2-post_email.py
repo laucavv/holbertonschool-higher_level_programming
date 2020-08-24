@@ -10,7 +10,7 @@ from sys import argv
 
 if __name__ == "__main__":
     url = argv[1]
-    values = {'email': 'hr@holbertonschool.com'}
+    values = {'email': argv[2]}
     data = urllib.parse.urlencode(values)
     data = data.encode('ascii')  # data should be bytes
     req = urllib.request.Request(url, data)
