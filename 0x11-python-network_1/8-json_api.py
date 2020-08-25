@@ -14,7 +14,7 @@ if __name__ == '__main__':
     req = requests.post('http://0.0.0.0:5000/search_user', data=values)
     try:
         result = req.json()
-        if data:
+        if result:
             print('[{}] {}'.format(result.get('id'), result.get('name')))
         else:
             print('No result')
