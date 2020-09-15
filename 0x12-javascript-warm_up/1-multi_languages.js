@@ -7,4 +7,4 @@
 const myC = 'C is fun\n';
 const myPython = 'Python is cool\n';
 const myVar = 'Javascript is amazing';
-console.log(myC + myPython + myVar)
+console.log(myC + myPython + myVar);
