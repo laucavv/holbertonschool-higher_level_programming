@@ -1,5 +1,5 @@
 #!/usr/bin/node
-/*  script that computes the number of tasks completed by user id.*/
+/* script that computes the number of tasks completed by user id. */
 const request = require('request');
 const dict = {};
 request(process.argv[2], function (err, res, body) {
